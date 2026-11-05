@@ -8,6 +8,7 @@ export default function SiteHeader({ activeRoute = 'home', onNavigate }) {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
+    { id: 'verticals', label: 'Verticals' },
     { id: 'services', label: '12 ERP Systems' },
     { id: 'insights', label: 'Consultancy & Insights' },
     { id: 'work', label: 'Our Work' },

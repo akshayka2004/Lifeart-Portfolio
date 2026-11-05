@@ -1,11 +1,11 @@
 export const COMPANY = {
   legalName: 'Lifeart Business Services Pvt. Ltd.',
   brandName: 'Lifeart Group',
-  tagline: 'Driving Business Excellence Through Digital & Enterprise Solutions.',
-  heroStatement: 'Transforming Enterprise Operations Through Intelligent Digital & Management Systems.',
-  heroSupport: 'Lifeart Group delivers 12 specialized enterprise ERP & management systems, software & service consultancy, resource augmentation, and telesales growth support from Trivandrum, Kerala.',
-  overview: 'Lifeart Business Services Pvt. Ltd. (Lifeart Group) is an established business consultancy and enterprise technology provider headquartered in Trivandrum, Kerala, India. We empower organizations across healthcare, manufacturing, education, retail, hospitality, insurance, and contracting sectors with tailored ERP platforms and dedicated business services.',
-  approachIntro: 'From diagnostic workflow mapping to full-scale enterprise software deployment, resource augmentation, and continuous SLA support, our methodology guarantees measurable operational progress.',
+  tagline: 'Driving Business Excellence Across Strategic Enterprise Verticals.',
+  heroStatement: 'Transforming Enterprise Operations Across 6 Strategic Business Verticals.',
+  heroSupport: 'Lifeart Group delivers integrated business solutions across Media & Broadcasting, Tactical Communications, Collaboration Events, Information & Technology, Government Relations, and PR Activations from Trivandrum, Kerala.',
+  overview: 'Lifeart Business Services Pvt. Ltd. (Lifeart Group) is a premier multi-disciplinary business services and consulting firm headquartered in Trivandrum, Kerala, India. Operating across six core strategic verticals—spanning Media & Broadcasting, Tactical Communication Solutions, Collaboration & Networking Events, Information & Technology Solutions (including 12 proprietary ERP platforms), Government Relations, and PR Activations & Branding—we empower organizations with institutional execution.',
+  approachIntro: 'From strategic diagnostic mapping to turnkey technical execution, government liaison, software deployment, and continuous SLA support, our methodology guarantees measurable operational progress.',
   establishedYear: '2019',
   corporateAddress: 'Trivandrum, Kerala, India - 695001',
   contactEmail: 'saju@lifeartgroup.in',
@@ -15,46 +15,170 @@ export const COMPANY = {
   workingHours: 'Monday – Saturday: 09:30 – 18:30 IST'
 };
 
+export const VERTICALS = [
+  {
+    slug: 'media-broadcasting',
+    number: '01',
+    title: 'Media & Broadcasting',
+    shortTitle: 'Media & Broadcasting',
+    category: 'Creative & Broadcast Infrastructure',
+    tagline: 'High-definition broadcast infrastructure, multi-channel transmission, studio engineering, and content syndication.',
+    summary: 'Lifeart Group’s Media & Broadcasting vertical delivers turnkey studio production facilities, broadcast transmission architecture, master control room (MCR) operations, and high-throughput digital streaming networks engineered for television networks, digital OTT platforms, and corporate media divisions.',
+    challenge: 'Broadcasters and corporate media operations struggle with fragmented production workflows, latency bottlenecks in high-definition streaming, and complex multi-channel compliance standards.',
+    deliverables: [
+      'High-Definition Studio Production & Master Control Setup (MCR)',
+      'Live Broadcast Operations & Multi-Channel Streaming Telemetry',
+      'Program Syndication, Archival Asset Management & Post-Production',
+      'Regulatory Broadcast Compliance & Satellite / IP Transmission'
+    ],
+    metrics: { primary: '99.98% Transmission Uptime', secondary: '4K/UHD Digital Pipeline' },
+    image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80',
+    featured: true
+  },
+  {
+    slug: 'tactical-communication-solutions',
+    number: '02',
+    title: 'Tactical Communication Solutions',
+    shortTitle: 'Tactical Communications',
+    category: 'Mission-Critical Telecommunications',
+    tagline: 'Mission-critical encrypted networks, rapid-deploy field telephony, disaster response communications, and high-volume voice operations.',
+    summary: 'Engineering secure, redundant, and rapidly deployable communication networks. From tactical field radio and encrypted push-to-talk (PTT) arrays to enterprise CRM telephony and high-throughput TeleSales voice infrastructure, we guarantee fail-safe connectivity.',
+    challenge: 'Remote operations, public safety initiatives, and enterprise contact centers face severe risks when conventional communication grids fail or lack end-to-end cryptographic integrity.',
+    deliverables: [
+      'Encrypted Voice, Radio & Push-to-Talk (PTT) Infrastructure',
+      'Rapid-Deploy Field Communication Hubs & Disaster Response Comms',
+      'Unified Enterprise Telephony, CRM CTI & Contact Center Systems',
+      'TeleSales Infrastructure, Call Routing & Real-Time Voice Analytics'
+    ],
+    metrics: { primary: 'Sub-50ms Low-Latency Comms', secondary: 'Zero Single Point of Failure' },
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80',
+    featured: true
+  },
+  {
+    slug: 'collaboration-networking-events',
+    number: '03',
+    title: 'Collaboration & Networking Events',
+    shortTitle: 'Collaboration Events',
+    category: 'Institutional Conclaves & B2B Summits',
+    tagline: 'High-level corporate summits, government-industry conclaves, VIP networking symposiums, and international trade delegations.',
+    summary: 'We curate and orchestrate premier corporate summits, bilateral trade conclaves, and institutional networking events. Our turnkey management covers high-level stakeholder curation, VIP protocol, immersive audiovisual stagecraft, and structured B2B deal-making frameworks.',
+    challenge: 'Generic conference management fails to engage high-level decision makers or deliver measurable commercial partnerships and policy momentum.',
+    deliverables: [
+      'High-Stakes Corporate Summits, Conclaves & Executive Roundtables',
+      'Curated B2B Partner Matchmaking & Bilateral Delegation Coordination',
+      'Turnkey Stage Architecture, Audiovisual Immersion & Hybrid Telepresence',
+      'Post-Event Engagement Tracking, Outcome Documentation & Deal Follow-Through'
+    ],
+    metrics: { primary: '10,000+ Institutional Delegates', secondary: '85%+ Partner Engagement' },
+    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
+    featured: true
+  },
+  {
+    slug: 'information-technology-solutions',
+    number: '04',
+    title: 'Information & Technology Solutions',
+    shortTitle: 'IT & Technology',
+    category: 'Enterprise ERP & Software Engineering',
+    tagline: '12 specialized enterprise ERP systems, custom cloud software architectures, and senior IT management consultancy.',
+    summary: 'The technological backbone of Lifeart Group. We deliver 12 domain-specific ERP and management systems across Healthcare, Manufacturing, Retail, Education, and Hospitality, alongside tailored software development, resource augmentation, and 24/7 SLA governance.',
+    challenge: 'Off-the-shelf software packages fail to match complex organizational workflows, causing disconnected departmental silos and delayed decision-making.',
+    deliverables: [
+      '12 Deployed Industry ERP Systems (Hospitals, Clinics, Schools, Plants, Boutiques)',
+      'Custom Enterprise Application Architecture & Cloud Migration',
+      'Software & Service Consultancy, Workflow Diagnostics & Code Audits',
+      'Dedicated Technical Desk, 24/7 Server Monitoring & Resource Augmentation'
+    ],
+    metrics: { primary: '12 Vertical ERP Platforms', secondary: 'Up to 38% OpEx Reduction' },
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
+    featured: true,
+    hasErpCatalogLink: true
+  },
+  {
+    slug: 'government-relations',
+    number: '05',
+    title: 'Government Relations',
+    shortTitle: 'Government Relations',
+    category: 'Public Policy & Institutional Liaison',
+    tagline: 'Strategic policy advisory, regulatory liaison, public sector compliance, and public-private partnership (PPP) facilitation.',
+    summary: 'Navigating complex regulatory environments and institutional protocols with discretion and strategic alignment. Lifeart Group provides state and national policy intelligence, statutory compliance roadmaps, and structured engagement frameworks for public-private initiatives.',
+    challenge: 'Private sector enterprises often lack the institutional vocabulary, protocol awareness, and compliance speed required for high-stakes government collaborations.',
+    deliverables: [
+      'Policy Analysis, Regulatory Monitoring & Statutory Alignment',
+      'Public-Private Partnership (PPP) Structuring & Tender Advisory',
+      'Inter-Agency Liaison, Approvals & Clearances Navigation',
+      'Institutional Whitepapers, Policy Representation & Governance Compliance'
+    ],
+    metrics: { primary: '100% Regulatory Adherence', secondary: 'Multilateral Institutional Reach' },
+    image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80',
+    featured: true
+  },
+  {
+    slug: 'pr-activations-branding',
+    number: '06',
+    title: 'PR Activations & Branding',
+    shortTitle: 'PR & Branding',
+    category: 'Strategic Communications & Brand Authority',
+    tagline: 'Strategic brand positioning, corporate narrative blueprinting, high-impact experiential activations, and media relations.',
+    summary: 'Elevating corporate reputations into enduring market authority. We architect corporate narratives, manage top-tier press relations, execute high-profile brand activations, and protect institutional standing through proactive crisis communications.',
+    challenge: 'Modern markets are saturated with superficial noise; building genuine institutional authority requires nuanced storytelling and multi-channel engagement.',
+    deliverables: [
+      'Brand Identity Blueprinting, Executive Narrative & Corporate Positioning',
+      'Strategic Media Relations, Press Conclaves & Crisis Communications',
+      'High-Visibility Public Activations, Brand Showcases & Experiential Launches',
+      'Digital PR, Social Authority & Multi-Channel Perception Measurement'
+    ],
+    metrics: { primary: '3.5x Brand Visibility Lift', secondary: 'Tier-1 National Media Reach' },
+    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80',
+    featured: true
+  }
+];
+
 export const HERO_SLIDES = [
   {
     index: '01',
-    eyebrow: 'LIFEART GROUP • 12 SPECIALIZED ERP SYSTEMS',
-    headlinePrefix: 'Business Services That Drive',
+    eyebrow: 'LIFEART GROUP • 6 CORE STRATEGIC VERTICALS',
+    headlinePrefix: 'Integrated Business Capabilities That Drive',
     headlineHighlight: 'Real Progress.',
-    description: 'Purpose-built ERP and management platforms for hospitals, clinics, schools, manufacturing plants, boutiques, salons, hotels, restaurants, and retail shops.',
-    metricLabel: 'DEPLOYED VERTICAL ERPs',
-    metricValue: '12 Platforms',
+    description: 'Operating across Media & Broadcasting, Tactical Communications, Networking Events, Information & Technology, Government Relations, and PR Activations.',
+    metricLabel: 'ENTERPRISE VERTICALS',
+    metricValue: '6 Core Pillars',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
-    caption: 'ENTERPRISE ERP SUITE • TRIVANDRUM, KERALA',
-    primaryCta: { label: 'Explore 12 ERP Systems', route: 'services' }
+    caption: 'MULTI-DISCIPLINARY BUSINESS SERVICES • TRIVANDRUM',
+    primaryCta: { label: 'Explore 6 Verticals', route: 'verticals' }
   },
   {
     index: '02',
-    eyebrow: 'STRATEGIC ADVISORY • DIGITAL TRANSFORMATION',
-    headlinePrefix: 'Software & Service Consultancy for',
-    headlineHighlight: 'Modern Enterprises.',
-    description: 'We audit operational bottlenecks, design custom software architectures, and implement automated workflows that maximize productivity and compliance.',
-    metricLabel: 'WORKFLOW EFFICIENCY GAIN',
-    metricValue: 'Up to 38%',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
-    caption: 'SOFTWARE & SERVICE CONSULTANCY DESK',
-    primaryCta: { label: 'View Consultancy Pillars', route: 'insights' }
+    eyebrow: 'INFORMATION & TECHNOLOGY SOLUTIONS',
+    headlinePrefix: '12 Domain-Specialized ERP &',
+    headlineHighlight: 'Management Systems.',
+    description: 'Purpose-built management software for hospitals, clinics, schools, manufacturing plants, boutiques, salons, hotels, restaurants, and retail shops.',
+    metricLabel: 'DEPLOYED VERTICAL ERPs',
+    metricValue: '12 Platforms',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
+    caption: 'ENTERPRISE ERP & IT INFRASTRUCTURE',
+    primaryCta: { label: 'Explore 12 ERP Systems', route: 'services' }
   },
   {
     index: '03',
-    eyebrow: 'SCALABLE TALENT & REVENUE ACCELERATION',
-    headlinePrefix: 'Resource Augmentation &',
-    headlineHighlight: 'TeleSales Growth.',
-    description: 'Scale your organization rapidly with on-demand technical specialists and dedicated outbound/inbound TeleSales support teams engineered for measurable ROI.',
+    eyebrow: 'GOVERNMENT RELATIONS, PR & STRATEGIC ADVISORY',
+    headlinePrefix: 'Institutional Influence &',
+    headlineHighlight: 'Brand Authority.',
+    description: 'Strategic policy liaison, high-stakes networking summits, tactical communications, and national PR activations engineered for sustainable corporate leadership.',
     metricLabel: 'CLIENT SLA RELIABILITY',
     metricValue: '99.4% Uptime',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
-    caption: 'RESOURCE AUGMENTATION & TELESALES SUPPORT',
+    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
+    caption: 'INSTITUTIONAL PARTNERSHIPS & PUBLIC SECTOR ALIGNMENT',
     primaryCta: { label: 'Discuss Your Requirement', route: 'contact' }
   }
 ];
 
 export const MARQUEE_ITEMS = [
+  'MEDIA & BROADCASTING',
+  'TACTICAL COMMUNICATION SOLUTIONS',
+  'COLLABORATION & NETWORKING EVENTS',
+  'INFORMATION & TECHNOLOGY SOLUTIONS',
+  'GOVERNMENT RELATIONS',
+  'PR ACTIVATIONS & BRANDING',
   'BOUTIQUE MANAGEMENT SYSTEM',
   'SALON & SPA MANAGEMENT',
   'HOSPITAL MANAGEMENT SYSTEM',
@@ -358,52 +482,52 @@ export const CONSULTANCY_PILLARS = [
 
 export const CAPABILITY_METRICS = [
   {
-    label: 'Custom ERP & Vertical Management Systems',
+    label: 'Information & Technology Solutions (12 ERPs)',
     percentage: 96,
     detail: '12 specialized platforms across Healthcare, Retail, Manufacturing, Hospitality & Education'
   },
   {
-    label: 'Software & Operational Process Consultancy',
-    percentage: 92,
-    detail: 'End-to-end workflow blueprinting, legacy data migration & compliance auditing'
-  },
-  {
-    label: 'Resource Augmentation & Technical Staffing',
-    percentage: 89,
-    detail: 'Flexible on-demand deployment of software engineers and ERP implementation teams'
-  },
-  {
-    label: 'TeleSales Support & Revenue Acceleration',
+    label: 'Media, Broadcasting & Tactical Comms',
     percentage: 94,
-    detail: 'Dedicated outbound/inbound lead conversion, renewal tracking & CRM pipeline management'
+    detail: 'High-definition studios, transmission networks & encrypted mission-critical telemetry'
+  },
+  {
+    label: 'Collaboration Events & Government Relations',
+    percentage: 91,
+    detail: 'B2B summits, VIP bilateral conclaves, regulatory monitoring & PPP advisory'
+  },
+  {
+    label: 'PR Activations, Branding & Growth TeleSales',
+    percentage: 95,
+    detail: 'Reputation architecture, tier-1 media launches, CRM outreach & revenue engines'
   }
 ];
 
 export const FAQ_ITEMS = [
   {
     id: 'faq-01',
-    question: 'Can Lifeart Group customize an ERP system to match our exact workflow?',
-    answer: 'Yes. While we maintain 12 proven industry cores—spanning Hospitals, Schools, Production Plants, Boutiques, Hotels, and Retail Shops—every deployment begins with a diagnostic blueprint. We customize modules, approval hierarchies, invoice templates, and hardware integrations (barcode scanners, POS printers, biometric devices) around your exact operational rules.'
+    question: 'What are the 6 primary strategic verticals of Lifeart Group?',
+    answer: 'Lifeart Group operates across six integrated business verticals: (1) Media & Broadcasting, (2) Tactical Communication Solutions, (3) Collaboration & Networking Events, (4) Information & Technology Solutions (including 12 industry ERP systems), (5) Government Relations, and (6) PR Activations & Branding. This multi-disciplinary foundation enables us to support client organizations with both technological infrastructure and strategic institutional influence.'
   },
   {
     id: 'faq-02',
-    question: 'How long does it take to migrate our legacy data and train our staff?',
-    answer: 'Standard single-site implementations (such as Boutique, Clinic, Salon, or Retail Shop ERP) go live within 7 to 14 business days, including master data import and hands-on staff training. Multi-department Hospital, School, or Manufacturing Production ERP rollouts typically follow a phased 3 to 6 week parallel-run schedule to guarantee zero operational downtime.'
+    question: 'How does your Information & Technology Solutions vertical connect with the 12 ERP platforms?',
+    answer: 'Information & Technology Solutions encompasses our core software engineering, cloud architecture, and 12 proprietary ERP systems purpose-built for hospitals, clinics, schools, manufacturing plants, boutiques, salons, hotels, restaurants, and retail shops. We provide turnkey deployment, legacy data migration, and dedicated SLA support.'
   },
   {
     id: 'faq-03',
-    question: 'How does your Resource Augmentation model work for growing businesses?',
-    answer: 'Our Resource Augmentation service allows you to onboard vetted software developers, ERP administrators, and business analysts on flexible monthly or project-based contracts. You gain immediate execution capacity without recruitment delays or long-term payroll liabilities.'
+    question: 'What capabilities does Lifeart Group provide under Government Relations?',
+    answer: 'Our Government Relations practice provides institutional policy intelligence, statutory compliance alignment, public-private partnership (PPP) structuring, and multi-agency liaison. We help private enterprises navigate regulatory frameworks with full governance adherence.'
   },
   {
     id: 'faq-04',
-    question: 'Can we combine TeleSales Support with our CRM or ERP software?',
-    answer: 'Absolutely. Our TeleSales Support desk integrates directly with your lead pipeline, clinic/salon appointment book, or insurance renewal registry—handling outbound lead qualification, appointment confirmations, and renewal follow-ups with full call-disposition reporting.'
+    question: 'Can Lifeart manage our Media Broadcasting and PR Activations together?',
+    answer: 'Yes. Our integrated structure allows clients to combine studio broadcast production, multi-channel live streaming, strategic press conclaves, experiential public activations, and crisis communications under a unified corporate narrative.'
   },
   {
     id: 'faq-05',
-    question: 'What kind of post-deployment support and SLA coverage do you provide?',
-    answer: 'Every Lifeart Group software deployment and consultancy engagement is backed by our Trivandrum technical desk (Monday – Saturday, 09:30 – 18:30 IST, with 24/7 critical server monitoring), covering routine backups, statutory GST/compliance updates, and staff refresher training.'
+    question: 'What kind of Tactical Communication Solutions do you engineer?',
+    answer: 'We architect mission-critical communications ranging from encrypted radio and push-to-talk (PTT) field networks to cloud CRM telephony, automated voice routing, and high-volume TeleSales outreach infrastructure with real-time call telemetry.'
   }
 ];
 
@@ -413,7 +537,7 @@ export const PROJECTS = [
     number: '01',
     title: 'Manufacturing ERP & Real-Time Shopfloor Digitization',
     clientLabel: 'Precision Manufacturing & Engineering Corp',
-    category: 'Production Management System',
+    category: 'Information & Technology Solutions',
     summary: 'Turnkey deployment of an end-to-end Production Management System covering 6 manufacturing lines, multi-level BOM, and live raw material tracking.',
     challenge: 'Paper job cards and delayed inventory reconciliations led to frequent production halts, high scrap rates, and 9-day billing turnaround.',
     approach: 'Implemented Lifeart Production Management System with automated work orders, QR-code material tracking, and machine utilization dashboards.',
@@ -432,7 +556,7 @@ export const PROJECTS = [
     number: '02',
     title: 'Multi-Specialty Hospital & Clinic Management Overhaul',
     clientLabel: '200-Bed Multi-Specialty Hospital Network',
-    category: 'Hospital Management System',
+    category: 'Information & Technology Solutions',
     summary: 'Consolidation of OPD, IPD, diagnostic lab billing, and pharmacy management into a synchronized cloud administration platform.',
     challenge: 'Disconnected legacy software caused 45-minute patient discharge delays, lost pharmacy billing, and fragmented doctor consult schedules.',
     approach: 'Deployed Lifeart Hospital Management System with unified patient IDs, barcode medication verification, and direct insurance claims tracking.',
@@ -451,7 +575,7 @@ export const PROJECTS = [
     number: '03',
     title: 'Omnichannel Boutique, Salon & Retail ERP Sync',
     clientLabel: 'Luxury Retail & Salon Chain (12 Branches)',
-    category: 'Boutique & Salon ERP',
+    category: 'Information & Technology Solutions',
     summary: 'Cloud POS deployment synchronizing appointment booking, multi-store variant inventory, and membership loyalty across 12 outlets.',
     challenge: 'Manual appointment booking led to double-bookings, while lack of inter-branch inventory visibility prevented timely stock transfers.',
     approach: 'Rolled out Lifeart Boutique & Salon Management System with live appointment calendar sync, smart reordering, and unified customer profiles.',
@@ -471,44 +595,44 @@ export const APPROACH_STEPS = [
   {
     step: '01',
     title: 'Diagnostic & Requirement Blueprinting',
-    description: 'We analyze your current business workflows, document operational bottlenecks, and blueprint customized ERP software architecture tailored to your industry.'
+    description: 'We analyze your organizational workflows, policy requirements, communication grids, or software bottlenecks to architect tailored multi-vertical solutions.'
   },
   {
     step: '02',
-    title: 'Tailored Software Configuration',
-    description: 'Configuring custom modules, master data schemas, user authorization roles, and hardware integrations (POS printers, barcode scanners, lab equipment).'
+    title: 'Tailored Configuration & Protocol Design',
+    description: 'Configuring custom software modules, communication encryption schemas, institutional liaisons, and event master production timelines.'
   },
   {
     step: '03',
-    title: 'Live Implementation & Staff Training',
-    description: 'Onsite & remote deployment with hands-on staff onboarding, legacy data migration, and zero-downtime parallel testing to ensure smooth transition.'
+    title: 'Live Implementation & Operational Onboarding',
+    description: 'Turnkey deployment with hands-on staff onboarding, broadcast transmission testing, government engagement facilitation, and zero-downtime execution.'
   },
   {
     step: '04',
     title: 'Continuous Optimization & SLA Support',
-    description: 'Dedicated technical desk providing 24/7 server uptime monitoring, scheduled security updates, resource augmentation, and continuous business support.'
+    description: 'Dedicated technical desk providing 24/7 server uptime monitoring, policy updates, crisis communications readiness, and continuous business support.'
   }
 ];
 
 export const DIFFERENTIATORS = [
   {
     num: '01',
+    heading: '6 Core Strategic Verticals',
+    text: 'A holistic corporate partner delivering Media & Broadcasting, Tactical Comms, Networking Summits, IT & 12 ERPs, Government Relations, and PR Activations.'
+  },
+  {
+    num: '02',
     heading: '12 Domain-Specialized ERP Cores',
     text: 'Purpose-built systems for schools, hospitals, clinics, manufacturing, boutiques, salons, hotels, restaurants, insurance, contracting, service centres, and shops.'
   },
   {
-    num: '02',
-    heading: 'End-to-End Delivery & Support',
-    text: 'From software configuration and legacy data migration to staff training and continuous SLA support, our Trivandrum desk manages everything.'
-  },
-  {
     num: '03',
-    heading: 'Consultancy, Talent & TeleSales',
-    text: 'Beyond software, we provide Software & Service Consultancy, flexible Resource Augmentation, and dedicated TeleSales Support to drive top-line growth.'
+    heading: 'Institutional Influence & Policy Liaison',
+    text: 'Deep expertise in public sector alignment, regulatory compliance navigation, and bilateral industry summits connecting businesses with policy makers.'
   },
   {
     num: '04',
-    heading: 'Modular & Highly Scalable',
-    text: 'Start with core billing, appointment, or inventory modules and seamlessly expand to multi-branch enterprise ERP as your organization scales.'
+    heading: 'End-to-End Delivery & SLA Governance',
+    text: 'From initial diagnostic blueprint to live broadcast, software deployment, staff training, and 24/7 SLA desk support managed from our Trivandrum headquarters.'
   }
 ];

@@ -12,8 +12,10 @@ import EditorialTopologyCanvas from './components/EditorialTopologyCanvas';
 import EditorialMarquee from './components/EditorialMarquee';
 import ErpCatalogGrid from './components/ErpCatalogGrid';
 import ConsultancyAndFaqSection from './components/ConsultancyAndFaqSection';
+import VerticalsShowcase from './components/VerticalsShowcase';
 import {
   COMPANY,
+  VERTICALS,
   HERO_SLIDES,
   ERP_SYSTEMS,
   SERVICES,
@@ -300,7 +302,53 @@ export default function App() {
             </div>
           </section>
 
-          {/* Section 02: All 12 Enterprise ERP & Management Systems (with Category Filter, Shimmer Loader & Load More) */}
+          {/* Section 02: 6 Strategic Business Verticals */}
+          <section className="editorial-section" style={{ borderTop: '1px solid var(--color-border)', backgroundColor: '#FFFFFF' }}>
+            <div className="executive-container">
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'flex-start',
+                  flexWrap: 'wrap',
+                  gap: '1rem',
+                  marginBottom: '2rem'
+                }}
+              >
+                <div style={{ maxWidth: '740px' }}>
+                  <span className="editorial-eyebrow-dark">02 // STRATEGIC ENTERPRISE VERTICALS</span>
+                  <h2
+                    className="font-serif"
+                    style={{
+                      fontSize: 'clamp(1.85rem, 3.5vw, 3.25rem)',
+                      color: 'var(--color-forest)',
+                      fontWeight: 600
+                    }}
+                  >
+                    6 Core Strategic Verticals
+                  </h2>
+                  <p style={{ color: 'var(--color-muted)', fontSize: '0.94rem', marginTop: '0.4rem', lineHeight: 1.6 }}>
+                    Operating across Media &amp; Broadcasting, Tactical Communications, Networking Events, Information &amp; Technology (12 ERP Systems), Government Relations, and PR Activations.
+                  </p>
+                </div>
+                <button
+                  onClick={() => handleNavigate('verticals')}
+                  className="btn-executive-dark-outline"
+                >
+                  <span>Explore All 6 Verticals</span>
+                  <ArrowRight size={14} />
+                </button>
+              </div>
+
+              {/* Dynamic Verticals Showcase */}
+              <VerticalsShowcase
+                onNavigateErp={() => handleNavigate('services')}
+                onInquireVertical={handleSimulatorInquire}
+              />
+            </div>
+          </section>
+
+          {/* Section 03: All 12 Enterprise ERP & Management Systems (with Category Filter, Shimmer Loader & Load More) */}
           <section
             className="editorial-section"
             style={{
@@ -321,7 +369,7 @@ export default function App() {
               >
                 <div>
                   <span className="editorial-eyebrow-dark">
-                    02 // 12 DEPLOYED ERP &amp; MANAGEMENT PLATFORMS
+                    03 // INFORMATION &amp; TECHNOLOGY — 12 DEPLOYED ERP PLATFORMS
                   </span>
                   <h2
                     className="font-serif"
@@ -363,11 +411,11 @@ export default function App() {
             </div>
           </section>
 
-          {/* Section 03: Disciplined 4-Step Approach */}
+          {/* Section 04: Disciplined 4-Step Approach */}
           <section className="editorial-section">
             <div className="executive-container">
               <div style={{ maxWidth: '640px', marginBottom: '2.5rem' }}>
-                <span className="editorial-eyebrow-dark">03 // OUR METHODOLOGY</span>
+                <span className="editorial-eyebrow-dark">04 // OUR METHODOLOGY</span>
                 <h2
                   className="font-serif"
                   style={{
@@ -710,6 +758,130 @@ export default function App() {
             </div>
 
             <ConsultancyAndFaqSection onInquire={handleSimulatorInquire} />
+          </div>
+        </main>
+      )}
+
+      {/* ROUTE 02B: STRATEGIC ENTERPRISE VERTICALS */}
+      {activeRoute === 'verticals' && (
+        <main className="editorial-section">
+          <div className="executive-container">
+            <div style={{ maxWidth: '840px', marginBottom: '2.75rem' }}>
+              <span className="editorial-eyebrow-dark">STRATEGIC ENTERPRISE VERTICALS</span>
+              <h1
+                className="font-serif"
+                style={{
+                  fontSize: 'clamp(2.4rem, 4.5vw, 4.25rem)',
+                  color: 'var(--color-forest)',
+                  fontWeight: 500,
+                  lineHeight: 1.1,
+                  marginBottom: '1.25rem'
+                }}
+              >
+                6 Core Verticals Driving Multi-Sector Leadership
+              </h1>
+              <p
+                style={{
+                  fontSize: '1.05rem',
+                  color: 'var(--color-charcoal)',
+                  lineHeight: 1.65,
+                  marginBottom: '0.75rem'
+                }}
+              >
+                Lifeart Business Services Pvt. Ltd. operates across six integrated enterprise verticals engineered for high-stakes corporate mandates, institutional relationships, mission-critical communications, and proprietary digital technologies.
+              </p>
+              <p style={{ color: 'var(--color-muted)', fontSize: '0.94rem', lineHeight: 1.6 }}>
+                Inspect any vertical below to review core capabilities, strategic challenges solved, and documented deliverables.
+              </p>
+            </div>
+
+            {/* Standalone Verticals Showcase */}
+            <VerticalsShowcase
+              standalone={true}
+              onNavigateErp={() => handleNavigate('services')}
+              onInquireVertical={handleSimulatorInquire}
+            />
+
+            {/* Cross-Vertical Synergy Matrix */}
+            <div style={{ marginTop: '4.5rem', borderTop: '1px solid var(--color-border)', paddingTop: '3rem' }}>
+              <span className="editorial-eyebrow-dark">CROSS-VERTICAL COLLABORATION</span>
+              <h2 className="font-serif" style={{ fontSize: 'clamp(1.85rem, 3.2vw, 2.75rem)', color: 'var(--color-forest)', fontWeight: 600, marginBottom: '2rem' }}>
+                How Our Verticals Work Together
+              </h2>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+                <div style={{ backgroundColor: 'var(--color-ivory-surface)', padding: '1.75rem', border: '1px solid var(--color-border)' }}>
+                  <div className="font-serif" style={{ fontSize: '1.35rem', color: 'var(--color-forest)', fontWeight: 600, marginBottom: '0.65rem' }}>
+                    01. Brand &amp; Broadcast Synergy
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--color-charcoal)', lineHeight: 1.6, marginBottom: '1rem' }}>
+                    By combining <strong>Media &amp; Broadcasting</strong> studio production with <strong>PR Activations &amp; Branding</strong>, we ensure corporate narratives reach both television networks and high-impact digital channels with institutional polish.
+                  </p>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--color-champagne)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600 }}>
+                    Integrated Media Pipeline
+                  </span>
+                </div>
+
+                <div style={{ backgroundColor: 'var(--color-ivory-surface)', padding: '1.75rem', border: '1px solid var(--color-border)' }}>
+                  <div className="font-serif" style={{ fontSize: '1.35rem', color: 'var(--color-forest)', fontWeight: 600, marginBottom: '0.65rem' }}>
+                    02. Mission-Critical Operational Core
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--color-charcoal)', lineHeight: 1.6, marginBottom: '1rem' }}>
+                    <strong>Tactical Communication Solutions</strong> works hand-in-hand with <strong>Information &amp; Technology Solutions</strong> (and our 12 ERP platforms), guaranteeing encrypted field connectivity and zero-downtime enterprise architectures.
+                  </p>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--color-champagne)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600 }}>
+                    Resilient Digital Backbone
+                  </span>
+                </div>
+
+                <div style={{ backgroundColor: 'var(--color-ivory-surface)', padding: '1.75rem', border: '1px solid var(--color-border)' }}>
+                  <div className="font-serif" style={{ fontSize: '1.35rem', color: 'var(--color-forest)', fontWeight: 600, marginBottom: '0.65rem' }}>
+                    03. Public-Private Institutional Alignment
+                  </div>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--color-charcoal)', lineHeight: 1.6, marginBottom: '1rem' }}>
+                    Our <strong>Government Relations</strong> desk and <strong>Collaboration &amp; Networking Events</strong> team orchestrate high-level industry conclaves and bilateral summits that bring together policy makers and corporate leadership.
+                  </p>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--color-champagne)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600 }}>
+                    High-Stakes Diplomatic Protocol
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Direct Multi-Vertical Consultation Banner */}
+            <div
+              style={{
+                marginTop: '3.5rem',
+                padding: '2.5rem 2rem',
+                backgroundColor: 'var(--color-forest)',
+                color: 'var(--color-ivory)',
+                border: '1px solid var(--color-champagne-subtle)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                gap: '1.5rem'
+              }}
+            >
+              <div>
+                <span style={{ fontSize: '0.74rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-champagne)', display: 'block', marginBottom: '0.4rem' }}>
+                  MULTI-DISCIPLINARY MANDATES
+                </span>
+                <h3 className="font-serif" style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.25rem)', marginBottom: '0.4rem' }}>
+                  Commission an integrated engagement with Lifeart Group.
+                </h3>
+                <p style={{ fontSize: '0.9rem', color: 'rgba(243, 240, 232, 0.8)', maxWidth: '640px' }}>
+                  Our corporate headquarters in Trivandrum coordinates senior directors across all six verticals for unified project governance.
+                </p>
+              </div>
+              <button
+                onClick={() => handleSimulatorInquire('Multi-Vertical Enterprise Consultation Request')}
+                className="btn-executive-primary"
+              >
+                <span>Initiate Dialogue</span>
+                <ArrowRight size={15} />
+              </button>
+            </div>
           </div>
         </main>
       )}

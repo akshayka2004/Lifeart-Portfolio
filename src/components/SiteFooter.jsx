@@ -1,5 +1,5 @@
 import React from 'react';
-import { COMPANY } from '../content/company';
+import { COMPANY, VERTICALS } from '../content/company';
 
 export default function SiteFooter({ onNavigate }) {
   return (
@@ -12,11 +12,25 @@ export default function SiteFooter({ onNavigate }) {
               {COMPANY.brandName}
             </div>
             <p style={{ fontSize: '0.88rem', color: 'rgba(243, 240, 232, 0.7)', maxWidth: '380px', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-              {COMPANY.legalName}. Institutional-grade managed operations, financial stewardship, and operational consulting for forward-thinking enterprises.
+              {COMPANY.legalName}. Multi-disciplinary enterprise operations, strategic communications, IT solutions, and institutional advisory for forward-thinking enterprises.
             </p>
             <div style={{ fontSize: '0.8rem', color: 'var(--color-champagne)' }}>
               HQ: {COMPANY.corporateAddress}
             </div>
+          </div>
+
+          {/* Strategic Verticals */}
+          <div>
+            <h4 className="footer-col-title">Strategic Verticals</h4>
+            <ul className="footer-link-list">
+              {VERTICALS.map((v) => (
+                <li key={v.slug}>
+                  <button onClick={() => onNavigate('verticals')}>
+                    {v.title}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Core Routes */}
@@ -25,6 +39,7 @@ export default function SiteFooter({ onNavigate }) {
             <ul className="footer-link-list">
               <li><button onClick={() => onNavigate('home')}>Home</button></li>
               <li><button onClick={() => onNavigate('about')}>About the Firm</button></li>
+              <li><button onClick={() => onNavigate('verticals')}>6 Strategic Verticals</button></li>
               <li><button onClick={() => onNavigate('services')}>12 ERP &amp; Management Systems</button></li>
               <li><button onClick={() => onNavigate('insights')}>Consultancy &amp; Insights</button></li>
               <li><button onClick={() => onNavigate('work')}>Case Studies &amp; Portfolio</button></li>
@@ -69,4 +84,3 @@ export default function SiteFooter({ onNavigate }) {
     </footer>
   );
 }
-
