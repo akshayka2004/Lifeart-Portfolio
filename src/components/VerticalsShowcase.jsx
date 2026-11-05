@@ -307,3 +307,4 @@ export default function VerticalsShowcase({
     </div>
   );
 }
+
